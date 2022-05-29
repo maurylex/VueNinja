@@ -1,15 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+  <NavbarComponent :msg="msg" :category="category" :description="description" :classModal ="classModal" />
+   
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavbarComponent from './components/NavbarComponent'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    NavbarComponent
+  },
+
+  data(){
+  return {
+   
+   msg: "Shoes",
+   category: "Sneakers",
+   description: "Thes best Sneakers",
+   classModal: "sale"
+
+  }
+
   }
 }
 </script>
